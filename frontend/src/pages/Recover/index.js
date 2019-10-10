@@ -16,7 +16,7 @@ export default function Recover({ history }) {
         history.push('/dashboard');
     }
 
-    async function handleSubmit(event){
+    async function handleBack(event){
         event.preventDefault();
 
         history.push('/');
@@ -36,7 +36,7 @@ export default function Recover({ history }) {
                     onChange={event => setEmail(event.target.value)}
                     />
                 <p>
-                    <button onClick={handleSubmit} className="btn">Cancelar</button>
+                    <button onClick={handleBack} className="btn">Cancelar</button>
                 
                     <button className="btn" type="submit">Enviar</button>
                 </p>

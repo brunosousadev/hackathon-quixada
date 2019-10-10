@@ -17,10 +17,10 @@ export default function Login({ history }) {
         history.push('/dashboard');
     }
 
-    async function handleButton(event){
+    async function handleRegister(event){
         event.preventDefault();
 
-        history.push('/register');
+        history.push('/userregister');
     }
 
     return (
@@ -48,8 +48,12 @@ export default function Login({ history }) {
                     />
 
                 <a href="/recover">Esqueceu sua senha?</a>
+                <p>
+                    <button onClick={handleRegister} className="btn">Cadastrar</button>
 
-                <button className="btn" type="submit">Entrar</button>
+                    <button className="btn" type="submit">Entrar</button>
+                </p>
+                
             </form>
         </>
     )

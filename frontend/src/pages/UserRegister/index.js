@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import api from '../../services/api';
 
-import camera from '../../assets/speaker-volume.svg'
+import usericon from '../../assets/user-icon128.svg'
 
 import './styles.css'
 
@@ -41,12 +41,8 @@ export default function UserRegister({ history }) {
                 Cadastrar usuário
             </h1>
 
-            <label 
-            id="image" 
-            className={thumbnail ? 'has-thumbnail' : ''}
-            >
-                <input type="file" onChange={event => setThumbnail(event.target.files[0])}/>
-                <img src={camera} alt="Select img"/>
+            <label id="image" >
+                <img src={usericon} alt="Select img"/>
             </label>
 
             <input 

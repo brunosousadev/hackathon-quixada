@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import api from '../../services/api';
 
-import camera from '../../assets/speaker-volume.svg'
+import speaker from '../../assets/speaker-volume.svg'
 
 import './styles.css'
 
@@ -9,7 +9,7 @@ export default function Register({ history }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [thumbnail, setThumbnail] = useState('');
+    const [audio, setAudio] = useState('');
 
     async function handleBack(event){
         event.preventDefault();
@@ -42,11 +42,11 @@ export default function Register({ history }) {
             </h1>
 
             <label 
-            id="thumbnail" 
-            className={thumbnail ? 'has-thumbnail' : ''}
+            id="audio"
+            className="audio"
             >
-                <input type="file" onChange={event => setThumbnail(event.target.files[0])}/>
-                <img src={camera} alt="Select img"/>
+                <input type="file" onChange={event => setAudio(event.target.files[0])}/>
+                <img src={speaker} alt="Select img"/>
             </label>
 
             <input 
@@ -78,8 +78,8 @@ export default function Register({ history }) {
                 />
 
             <p>
-            <button onClick={handleBack} className="btn">Cancelar</button>
-            <button type="submit" className="btn">Cadastrar</button>
+                <button onClick={handleBack} className="btn">Cancelar</button>
+                <button type="submit" className="btn">Cadastrar</button>
             </p>
 
         </form>

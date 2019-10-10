@@ -1,4 +1,4 @@
-label#thumbnail {
+label#audio {
     margin-top: 20px;
     margin-bottom: 20px;
     border: 1px dashed #ddd;
@@ -11,14 +11,14 @@ label#thumbnail {
     align-items: center;
 }
 
-label#thumbnail input {
+label#audio input {
     display: none;
 }
 
-label#thumbnail.has-thumbnail {
+label#audio.has-audio {
     border: 0;
 }
 
-label#thumbnail.has-thumbnail img{
+label#audio.has-audio img{
     display: none;
 }

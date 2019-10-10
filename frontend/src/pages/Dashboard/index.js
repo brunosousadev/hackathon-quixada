@@ -23,6 +23,9 @@ export default function Dashboard() {
 
     return (
         <>
+        <h1>
+            Lista de Áudios
+        </h1>
             <ul className="spot-list">
                 {itens.map(item => (
                     <p>
@@ -36,7 +39,7 @@ export default function Dashboard() {
 
             <Link to="/register">
                 <button className="btn">
-                Cadastrar novo spot
+                Adicionar
                 </button>
             </Link>
         </>
