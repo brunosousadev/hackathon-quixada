@@ -17,14 +17,16 @@
 */
 
 const { Ignitor } = require("@adonisjs/ignitor");
-const Helpers = require('./helpers');
-var AWSBucketService = require("./app/services/AWSBucketService");
+const Helpers = require('Helpers');
+
+const uuid = require("uuid");
+
+const AWSBucketService = require("./app/services/AWSBucketService");
 
 let bucketService = new AWSBucketService();
 
-bucketService
-  .sendTextFileToBucket(
-    "node-sdk-sample-8ab6c65b-586e-41ff-9d74-a8c336dd3212",
+bucketService.sendTextFileToBucket(
+    AWSBucketService.TEST_BUCKET,
     "hello_world2.json",
     "{ \"hello\": \"Hello World! Segundo!\" }"
   )
@@ -34,7 +36,7 @@ bucketService
   .catch(err => console.error(err, err.stack));
 
 bucketService.getTextFileFromBucket(
-  "node-sdk-sample-8ab6c65b-586e-41ff-9d74-a8c336dd3212",
+  AWSBucketService.TEST_BUCKET,
   "hello_world2.json",
   function(data) {
     if (!data) console.error(err);
@@ -43,7 +45,7 @@ bucketService.getTextFileFromBucket(
 );
 
 bucketService.sendAudioFileToBucket(
-  "node-sdk-sample-8ab6c65b-586e-41ff-9d74-a8c336dd3212",
+  AWSBucketService.TEST_BUCKET,
   'shaitan.wav',
   Helpers.tmpPath('test/shaitan.wav')
 ).then(result => console.log('Funcionou'));
