@@ -1,0 +1,28 @@
+label#audio {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px dashed #ddd;
+    background-size: cover;
+    cursor: pointer;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label#audio input {
+    display: none;
+}
+
+label#audio.has-audio {
+    border: 0;
+}
+
+label#audio.has-audio img{
+    display: none;
+}
+
+.content  h1{
+    color: #9E9595
+}
