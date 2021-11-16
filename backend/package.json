@@ -29,7 +29,7 @@
     "@adonisjs/validator": "^5.0.6",
     "@adonisjs/vow": "^1.0.17",
     "@types/date-fns": "^2.6.0",
-    "aws-sdk": "^2.546.0",
+    "aws-sdk": "^2.814.0",
     "date-fns": "^2.4.1",
     "pg": "^7.12.1"
   },
